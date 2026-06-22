@@ -1,0 +1,22 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "channel": "awgn",
+  "payload_bits": 6128,
+  "ber": 0.0,
+  "fer": 0.0,
+  "text_match_rate": 1.0,
+  "checksum_pass": true,
+  "sync_start_index": 108,
+  "prefix_len": 109,
+  "crc_expected": 1459598293,
+  "crc_received": 1459598293,
+  "crc_actual": 1459598293,
+  "coded_payload_bits": 18384,
+  "frame_bits": 18544,
+  "qpsk_padding_bits": 0,
+  "rayleigh_h_abs": 1.0,
+  "equalizer_h_abs": 1.0,
+  "failure_reason": ""
+}
