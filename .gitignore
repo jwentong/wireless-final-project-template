@@ -4,5 +4,9 @@ __pycache__/
 .venv/
 venv/
 env/
-results/
+results/*
+!results/received.txt
+!results/metrics.json
+!results/*.png
 *.log
+~$*
