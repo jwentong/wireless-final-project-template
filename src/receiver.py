@@ -18,6 +18,7 @@ def run_receiver(
     seed: int = 2026,
     preamble_symbols: np.ndarray | None = None,
     original_text: str | None = None,
+    fec: str = "repeat",
 ) -> tuple[str, dict]:
     sync = synchronize(rx_symbols, preamble=preamble_symbols)
     start = int(sync["sync_start_index"])
@@ -26,7 +27,7 @@ def run_receiver(
     parsed = parse_frame(frame_bits)
 
     coded_payload = [int(b) for b in parsed.get("payload", [])]
-    decoded_scrambled = channel_decode(coded_payload)
+    decoded_scrambled = channel_decode(coded_payload, mode=fec)
     length_val = int(parsed.get("length", 0))
     descrambled = descramble(decoded_scrambled, seed=seed)[:length_val]
 
@@ -75,5 +76,6 @@ def run_receiver(
         "sync_start_index": start,
         "sync": sync,
         "failure_reason": failure_reason,
+        "fec": fec,
     }
     return text, metrics

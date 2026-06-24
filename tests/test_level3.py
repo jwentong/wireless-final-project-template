@@ -24,6 +24,15 @@ def test_l3_convolutional_noiseless_reversible():
     assert decoded == bits
 
 
+def test_l3_conv_end_to_end_awgn():
+  text = open("Test.txt", encoding="utf-8").read() if __import__("pathlib").Path("Test.txt").exists() else "卷积码端到端"
+  tx, meta = run_transmitter(text, seed=2026, fec="conv")
+  rx = awgn(tx, snr_db=12, seed=2026)
+  recovered, m = run_receiver(rx, seed=2026, preamble_symbols=meta["preamble_symbols"], original_text=text, fec="conv")
+  assert m["text_match_rate"] == 1.0
+  assert recovered == text
+
+
 def test_l3_awgn_vs_rayleigh_match_rate():
     text = "AWGN与Rayleigh对比"
     tx, meta = run_transmitter(text, seed=42)

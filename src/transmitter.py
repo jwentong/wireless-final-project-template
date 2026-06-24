@@ -12,10 +12,10 @@ from src.source import source_encode
 from src.utils import preamble_bits
 
 
-def run_transmitter(text: str, seed: int = 2026) -> tuple[np.ndarray, dict]:
+def run_transmitter(text: str, seed: int = 2026, fec: str = "repeat") -> tuple[np.ndarray, dict]:
     source_bits = source_encode(text)
     scrambled = scramble(source_bits, seed=seed)
-    coded = channel_encode(scrambled)
+    coded = channel_encode(scrambled, mode=fec)
     frame = build_frame(coded, source_bits_for_crc=source_bits)
     frame_bits = frame["bits"]
     tx_symbols = qpsk_modulate(frame_bits)
@@ -34,5 +34,6 @@ def run_transmitter(text: str, seed: int = 2026) -> tuple[np.ndarray, dict]:
         "preamble_symbols": preamble_symbols,
         "offset": offset,
         "frame": frame,
+        "fec": fec,
     }
     return tx_symbols, meta

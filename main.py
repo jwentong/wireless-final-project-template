@@ -35,7 +35,7 @@ def main() -> int:
     results_dir.mkdir(parents=True, exist_ok=True)
 
     text = input_path.read_text(encoding="utf-8")
-    tx_symbols, meta = run_transmitter(text, seed=args.seed)
+    tx_symbols, meta = run_transmitter(text, seed=args.seed, fec=args.fec)
 
     if args.channel == "rayleigh":
         rx_symbols, _ = rayleigh(tx_symbols, snr_db=args.snr, seed=args.seed)
@@ -47,6 +47,7 @@ def main() -> int:
         seed=args.seed,
         preamble_symbols=meta["preamble_symbols"],
         original_text=text,
+        fec=args.fec,
     )
 
     output_path.write_text(recovered, encoding="utf-8")
@@ -80,6 +81,7 @@ def main() -> int:
         sync_correlation=sync_corr,
         sync_start_index=int(partial["sync_start_index"]),
         channel_name=args.channel,
+        fec=args.fec,
     )
     return 0
 

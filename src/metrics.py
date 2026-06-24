@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from src.channel_coding import CODING_RATES
+
 
 def build_metrics(
     *,
@@ -19,10 +21,12 @@ def build_metrics(
     checksum_pass: bool,
     sync_start_index: int,
     eb_n0_db: float | None = None,
-    coding_rate: float = 1.0 / 3.0,
+    coding_rate: float | None = None,
     failure_reason: str | None = None,
     fec: str = "repeat",
 ) -> dict:
+    if coding_rate is None:
+        coding_rate = CODING_RATES.get(fec, 1.0 / 3.0)
     if eb_n0_db is None:
         eb_n0_db = snr_db - 3.01 - 10.0 * __import__("math").log10(1.0 / coding_rate)
     return {
