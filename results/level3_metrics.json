@@ -1,0 +1,1383 @@
+{
+  "model": "single-carrier narrowband flat block Rayleigh fading",
+  "root_seed": 2026,
+  "experiment_seeds": [
+    479243620,
+    454024514,
+    1818751028,
+    2288458700,
+    2115331525
+  ],
+  "snr_db_points": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "schemes": {
+    "awgn_baseline": {
+      "label": "AWGN baseline",
+      "configuration": {
+        "channel": "awgn",
+        "equalizer": "none",
+        "diversity_order": 1
+      },
+      "points": [
+        {
+          "snr_db": 0,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        },
+        {
+          "snr_db": 4,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        },
+        {
+          "snr_db": 8,
+          "mean_ber": 0.40006527416,
+          "mean_fer": 0.8,
+          "text_complete_recovery_rate": 0.2,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0001631854,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0001631854,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        },
+        {
+          "snr_db": 12,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        },
+        {
+          "snr_db": 16,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        },
+        {
+          "snr_db": 20,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": null,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": null
+            }
+          ]
+        }
+      ]
+    },
+    "rayleigh_zf": {
+      "label": "Rayleigh + ZF (1 branch)",
+      "configuration": {
+        "channel": "rayleigh",
+        "equalizer": "zf",
+        "diversity_order": 1
+      },
+      "points": [
+        {
+          "snr_db": 0,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.2982030936749048,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.45197044695873584
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.023079031320873494
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.19234800422366669
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.6659733412977575
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.15764464457349028
+            }
+          ]
+        },
+        {
+          "snr_db": 4,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.19508487204307975,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.27933016677046213
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.014561884315393481
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.12136338596102966
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.46070187685689995
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.09946704631161349
+            }
+          ]
+        },
+        {
+          "snr_db": 8,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.1332375361206725,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.18637764250709846
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.009187927858268467
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.076575119723096
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.3312875271108354
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.06275946340406403
+            }
+          ]
+        },
+        {
+          "snr_db": 12,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 0.8,
+          "mean_channel_estimation_error": 0.07093187955194089,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.011205879606384556
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.005797190562728617
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.04831563419373753
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.2497421490264236
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03959854437043013
+            }
+          ]
+        },
+        {
+          "snr_db": 16,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.01554787371340261,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.00707043203900915
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.0036577799629048265
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03048510424775695
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.011541059916094347
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.02498499240124778
+            }
+          ]
+        },
+        {
+          "snr_db": 20,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.00981004511052189,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.004461141023660893
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.002307903132087266
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.019234800422366482
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.00728191651714569
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.015764464457349123
+            }
+          ]
+        }
+      ]
+    },
+    "rayleigh_mmse": {
+      "label": "Rayleigh + MMSE (1 branch)",
+      "configuration": {
+        "channel": "rayleigh",
+        "equalizer": "mmse",
+        "diversity_order": 1
+      },
+      "points": [
+        {
+          "snr_db": 0,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.2982030936749048,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.45197044695873584
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.023079031320873494
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.19234800422366669
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.6659733412977575
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.15764464457349028
+            }
+          ]
+        },
+        {
+          "snr_db": 4,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.19508487204307975,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.27933016677046213
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.014561884315393481
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.12136338596102966
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.46070187685689995
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.09946704631161349
+            }
+          ]
+        },
+        {
+          "snr_db": 8,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.6,
+          "mean_channel_estimation_error": 0.1332375361206725,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.18637764250709846
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.009187927858268467
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.076575119723096
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.3312875271108354
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.06275946340406403
+            }
+          ]
+        },
+        {
+          "snr_db": 12,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 0.8,
+          "mean_channel_estimation_error": 0.07093187955194089,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.011205879606384556
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.005797190562728617
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.04831563419373753
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.2497421490264236
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03959854437043013
+            }
+          ]
+        },
+        {
+          "snr_db": 16,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.01554787371340261,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.00707043203900915
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.0036577799629048265
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03048510424775695
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.011541059916094347
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.02498499240124778
+            }
+          ]
+        },
+        {
+          "snr_db": 20,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.00981004511052189,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.004461141023660893
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.002307903132087266
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.019234800422366482
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.00728191651714569
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.015764464457349123
+            }
+          ]
+        }
+      ]
+    },
+    "rayleigh_mrc": {
+      "label": "Rayleigh + MRC (2 branches)",
+      "configuration": {
+        "channel": "rayleigh",
+        "equalizer": "mrc",
+        "diversity_order": 2
+      },
+      "points": [
+        {
+          "snr_db": 0,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 0.8,
+          "mean_channel_estimation_error": 0.280769453872274,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.16778478612236927
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.07889276470393143
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.1193921035358154
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": false,
+              "channel_estimation_error": 0.8306130395278638
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.2071645754713901
+            }
+          ]
+        },
+        {
+          "snr_db": 4,
+          "mean_ber": 1.0,
+          "mean_fer": 1.0,
+          "text_complete_recovery_rate": 0.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.09128814398299652,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.10586504309594731
+            },
+            {
+              "seed": 454024514,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.04977796931629331
+            },
+            {
+              "seed": 1818751028,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.07533132459886241
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.09475437249408465
+            },
+            {
+              "seed": 2115331525,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.13071201040979488
+            }
+          ]
+        },
+        {
+          "snr_db": 8,
+          "mean_ber": 0.4,
+          "mean_fer": 0.4,
+          "text_complete_recovery_rate": 0.6,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.05759892491003702,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.06679632646510014
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03140777533342499
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.04753085252507371
+            },
+            {
+              "seed": 2288458700,
+              "ber": 1.0,
+              "fer": 1.0,
+              "text_match_rate": 0.0,
+              "text_complete": false,
+              "sync_success": true,
+              "channel_estimation_error": 0.059785967246754675
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.08247370297983161
+            }
+          ]
+        },
+        {
+          "snr_db": 12,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.03634246470615103,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.042145632767451625
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.019816966520408312
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.029989940490100217
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.037722395131192236
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.052037388621602766
+            }
+          ]
+        },
+        {
+          "snr_db": 16,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.02293054502285821,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.026592096532388677
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.012503660571369767
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.018922373212752683
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.023801222259409626
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.03283337253837029
+            }
+          ]
+        },
+        {
+          "snr_db": 20,
+          "mean_ber": 0.0,
+          "mean_fer": 0.0,
+          "text_complete_recovery_rate": 1.0,
+          "sync_success_rate": 1.0,
+          "mean_channel_estimation_error": 0.014468195795106154,
+          "per_seed": [
+            {
+              "seed": 479243620,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.01677847861223689
+            },
+            {
+              "seed": 454024514,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.007889276470393157
+            },
+            {
+              "seed": 1818751028,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.01193921035358159
+            },
+            {
+              "seed": 2288458700,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.01501755599217999
+            },
+            {
+              "seed": 2115331525,
+              "ber": 0.0,
+              "fer": 0.0,
+              "text_match_rate": 1.0,
+              "text_complete": true,
+              "sync_success": true,
+              "channel_estimation_error": 0.020716457547139133
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 41.90283099998487,
+  "finite_sample_notice": "Fixed finite-seed averages; not strict theoretical curves."
+}
