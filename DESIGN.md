@@ -21,3 +21,22 @@ The implemented base system follows the required chain:
 
 At SNR 12 dB, QPSK constellation points should cluster around four unit-power Gray-coded ideal points. BER and `text_match_rate` improve as SNR increases because hard QPSK decisions cross quadrant boundaries less often. A failure can come from noise-induced symbol decision errors, a wrong synchronization peak, a corrupted length field, or checksum mismatch after channel decoding.
 
+## Level 3 Rayleigh Flat Fading and Equalizer
+
+The Level 3 extension adds an optional Rayleigh flat fading channel while keeping the AWGN baseline command and behavior compatible. When `--channel awgn` is used, the original AWGN-only base chain is still used.
+
+For `--channel rayleigh`, the channel model is:
+
+`y = h * x + n`
+
+Here `x` is the transmitted QPSK symbol sequence, `h` is one fixed complex Gaussian fading coefficient for the whole frame, and `n` is complex AWGN. The coefficient `h` is generated from the configured random `seed`, so repeated runs are reproducible.
+
+After synchronization, the receiver extracts the received preamble symbols and compares them with the known QPSK preamble symbols. The flat channel is estimated with a least-squares preamble estimator:
+
+`h_hat = sum(y_preamble * conj(x_preamble)) / sum(abs(x_preamble)^2)`
+
+The synchronized frame is then equalized before QPSK demodulation:
+
+`x_equalized = y / h_hat`
+
+The implementation guards against an extremely small `h_hat` to avoid division-by-zero failures. Rayleigh-mode metrics additionally record `equalizer`, `channel_estimation`, `estimated_channel_real`, `estimated_channel_imag`, and `rayleigh_fading`.

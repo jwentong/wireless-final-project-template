@@ -28,3 +28,14 @@ Adopt reason: the final design is simple enough to explain in an oral defense, m
 
 Run public tests, then inspect any failures around frame length, QPSK padding, synchronization return shape, metrics fields, and plot generation.
 
+## Prompt 4
+
+User prompt: add a Level 3 Rayleigh flat fading channel and a preamble-based channel estimator/equalizer on the `feature/rayleigh-equalizer` branch, while keeping public tests at 22 passed and avoiding a rewrite.
+
+AI generated: `rayleigh_flat()`, `estimate_flat_channel()`, and `equalize_flat_channel()` in the channel module; a `--channel rayleigh` branch in the pipeline; Rayleigh-specific metrics fields; and `tests/test_rayleigh_equalizer.py`.
+
+Manual edited/change notes: the AWGN function signature and baseline path were intentionally left unchanged. The Rayleigh path was inserted only after channel selection and before QPSK demodulation, using synchronized preamble symbols for least-squares channel estimation.
+
+Verification result: `python -m pytest public_tests -q` reported 22 passed, `python -m pytest tests -q` reported 4 passed, and the Rayleigh CLI command completed with BER 0 and `text_match_rate` 1.0 at SNR 18 dB.
+
+Adopt reason: the extension is small, explainable, and matches the communication model `y = h*x + n`; it demonstrates channel estimation and equalization without destabilizing the required AWGN baseline.
