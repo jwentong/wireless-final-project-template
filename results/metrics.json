@@ -1,0 +1,31 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "channel": "awgn",
+  "payload_bits": 6128,
+  "ber": 0.0,
+  "fer": 0.0,
+  "text_match_rate": 1.0,
+  "checksum_pass": true,
+  "sync_start_index": 109,
+  "coding": "repetition-3",
+  "scrambling": "pn-xor",
+  "qpsk_mapping": "gray",
+  "prefix_offset_symbols": 109,
+  "crc_expected": "0xd0088428",
+  "crc_received": "0xd0088428",
+  "sync_peak_value": 1.0057317801182322,
+  "failure_reason": null,
+  "sync_error_symbols": 0,
+  "equalization": "none",
+  "fading_model": null,
+  "rayleigh_enabled": false,
+  "channel_estimation": "not_applicable",
+  "plot_files": [
+    "constellation.png",
+    "ber_curve.png",
+    "ber_curve_compare.png",
+    "sync_peak.png"
+  ]
+}

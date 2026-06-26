@@ -1,0 +1,32 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "channel": "rayleigh",
+  "payload_bits": 6128,
+  "ber": 0.005711488250652741,
+  "fer": 1.0,
+  "text_match_rate": 0.028985507246376812,
+  "checksum_pass": false,
+  "sync_start_index": 109,
+  "coding": "repetition-3",
+  "scrambling": "pn-xor",
+  "qpsk_mapping": "gray",
+  "prefix_offset_symbols": 109,
+  "crc_expected": "0xd0088428",
+  "crc_received": "0x749dab50",
+  "sync_peak_value": 1.0386166301450852,
+  "failure_reason": "utf8_decode_error: 'utf-8' codec can't decode byte 0x87 in position 25: invalid start byte",
+  "sync_error_symbols": 0,
+  "equalization": "one-tap",
+  "fading_model": "flat_rayleigh",
+  "rayleigh_enabled": true,
+  "channel_estimation": "known_h_simulation",
+  "comparison_note": "Rayleigh mode applies known-channel one-tap equalization before synchronization.",
+  "plot_files": [
+    "constellation.png",
+    "ber_curve.png",
+    "ber_curve_compare.png",
+    "sync_peak.png"
+  ]
+}

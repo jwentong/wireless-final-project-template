@@ -4,5 +4,6 @@ __pycache__/
 .venv/
 venv/
 env/
-results/
+.matplotlib-cache/
+.test_outputs/
 *.log
