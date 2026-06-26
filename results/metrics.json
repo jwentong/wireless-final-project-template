@@ -1,0 +1,32 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "channel": "awgn",
+  "payload_bits": 1544,
+  "ber": 0.0,
+  "fer": 0.0,
+  "text_match_rate": 1.0,
+  "checksum_pass": true,
+  "sync_start_index": 18,
+  "true_sync_offset": 18,
+  "sync_error_symbols": 0,
+  "qpsk_mapping": "00=(1+j)/sqrt(2), 01=(-1+j)/sqrt(2), 11=(-1-j)/sqrt(2), 10=(1-j)/sqrt(2)",
+  "channel_code": "repetition-3",
+  "scrambler": "PN XOR",
+  "snr_definition": "average received QPSK symbol power / complex AWGN noise power",
+  "qpsk_padding_bits": 0,
+  "failure_reason": "",
+  "fec": "repetition",
+  "level3_modules": [],
+  "available_level3_modules": [
+    "rayleigh_flat_fading",
+    "zero_forcing_equalization",
+    "convolutional_viterbi"
+  ],
+  "equalizer": "not_required_for_awgn",
+  "channel_gain_real": 1.0,
+  "channel_gain_imag": 0.0,
+  "estimated_gain_real": 1.0,
+  "estimated_gain_imag": 0.0
+}
