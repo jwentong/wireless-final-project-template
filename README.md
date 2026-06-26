@@ -1,129 +1,143 @@
-# 无线通信技术期末项目
+# Wireless Communication Final Project
 
-本仓库是无线通信技术课程期末项目的教师模板仓库。学生需要 Fork 本仓库到自己的 GitHub 账号，完成项目后向本仓库创建 Pull Request。教师将通过 Pull Request 中的 GitHub Actions 公开测试结果、隐藏验证集和文档检查完成验收。
+This project implements an end-to-end wireless communication baseband simulation system. It sends the UTF-8 payload in `Test.txt` through source coding, scrambling, channel coding, framing, QPSK modulation, wireless channel simulation, synchronization, demodulation, decoding, descrambling, and text recovery into `results/received.txt`.
 
-项目目标：根据 `PRD.docx` 的要求，使用 AI 辅助编程实现一个无线通信基带仿真系统，将 `Test.txt` 的 UTF-8 文本内容通过发送端、无线信道和接收端处理后恢复为 `results/received.txt`。
+## Implemented Features
 
-## 提交流程
+- UTF-8 Source Encode / Source Decode.
+- PN-sequence XOR Scramble / Descramble.
+- Repetition-3 channel coding and majority-vote decoding.
+- Frame fields: preamble, original payload length, transmitted payload length, payload, CRC32.
+- PRD-required Gray-coded QPSK.
+- AWGN channel with symbol-power SNR definition.
+- Preamble-correlation synchronization for random 0-128 QPSK-symbol prefix offsets.
+- Level 3 extension: Rayleigh flat fading plus perfect-CSI one-tap equalization.
+- Level 3 extension: local Web simulation interface.
+- `metrics.json`, constellation plot, BER-SNR curve, and synchronization peak plot.
 
-1. 点击本仓库右上角 `Fork`，将仓库复制到自己的 GitHub 账号下。
-2. Clone 自己 Fork 后的仓库到本地。
+## CLI Usage
 
-```bash
-git clone https://github.com/<your-username>/wireless-final-project-template.git
-cd wireless-final-project-template
-```
-
-3. 按 `PRD.docx` 完成设计、mock 测试和代码实现。
-4. 本地运行公开测试。
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-pytest public_tests -q
 ```
 
-5. 提交并推送到自己的 Fork。
-
-```bash
-git add .
-git commit -m "Complete wireless final project"
-git push origin main
-```
-
-6. 回到 GitHub 网页，从自己的 Fork 向教师原仓库创建 Pull Request。
-7. Pull Request 创建后，GitHub Actions 会自动运行公开测试，并在 PR 页面显示结果。
-
-请不要直接向教师仓库 main 分支提交代码。最终提交以 Pull Request 为准。
-
-## 必须提交的文件
-
-学生最终项目至少应包含：
-
-```text
-DESIGN.md
-TEST_PLAN.md
-MOCK_TEST_REPORT.md
-AI_LOG.md
-main.py
-src/
-tests/
-results/
-```
-
-## 统一运行命令
-
-项目必须支持以下命令：
+Required baseline command:
 
 ```bash
 python main.py --input Test.txt --output results/received.txt --snr 12 --seed 2026 --mod qpsk --channel awgn
 ```
 
-运行后应生成：
+Rayleigh extension:
 
-```text
-results/received.txt
-results/metrics.json
+```bash
+python main.py --input Test.txt --output results/received.txt --snr 18 --seed 2026 --mod qpsk --channel rayleigh
 ```
 
-并至少生成以下图表中的两项：
+## Web Interface
 
-```text
-results/constellation.png
-results/ber_curve.png
-results/sync_peak.png
+Start the local simulator UI:
+
+```bash
+python web_app.py --host 127.0.0.1 --port 8000
 ```
 
-## 公开测试
+Open:
 
-本仓库包含 `public_tests/`，用于公开验收和学生调试。这些测试只覆盖部分基础要求，不代表最终全部评分。
+```text
+http://127.0.0.1:8000
+```
 
-运行方式：
+The Web page supports a complete operation chain:
+
+```text
+Source Encode -> Scramble / Encrypt -> Channel Encode -> Frame Build
+-> QPSK Modulate -> Wireless Channel -> Synchronization
+-> QPSK Demodulate -> Channel Decode -> Descramble / Decrypt
+-> Source Decode -> Metrics / Plots
+```
+
+The operator can input custom text, adjust SNR and seed, choose AWGN or Rayleigh channel, choose PN-XOR scrambling or demo-mode no scrambling, choose repetition-3 channel coding or demo-mode no coding, then inspect every stage's bit/symbol counts, recovered text, metrics, constellation plot, BER-SNR curve, and synchronization peak.
+
+The Web interface also includes an interactive lesson panel. Each communication stage is clickable and shows:
+
+- a small SVG schematic diagram;
+- a paragraph explaining the stage's communication role;
+- the key formula or mapping rule;
+- live values from the latest simulation run.
+
+## Extension Experiments
+
+Run the extra experiment suite:
+
+```bash
+python scripts/run_experiments.py --input Test.txt --output-dir results/experiments --snrs 0,3,6,9,12,15 --seed 2026
+```
+
+It generates evidence for SNR degradation, coding gain, and the Rayleigh extension:
+
+```text
+results/experiments/experiment_summary.csv
+results/experiments/experiment_summary.json
+results/experiments/snr_text_match.png
+results/experiments/coding_gain.png
+```
+
+## Tests
+
+Local tests:
+
+```bash
+pytest tests -q
+```
+
+Teacher public tests:
 
 ```bash
 pytest public_tests -q
 ```
 
-公开测试主要检查：
+## Outputs
 
-- 项目结构和文档是否完整
-- 统一命令行入口是否可运行
-- 源编码、帧结构、扰码或加密、信道编码、QPSK、AWGN、同步等模块是否满足基本要求
-- `results/received.txt` 和 `results/metrics.json` 是否生成
-- `metrics.json` 字段是否完整
-- 是否生成至少两张结果图
-- 是否存在明显绕过无线链路的直接复制行为
-
-## 隐藏验证
-
-教师最终评分还会使用隐藏验证集。隐藏验证集不会公开，可能覆盖：
-
-- 不同中文文本
-- 不同文本长度
-- 不同 SNR
-- 不同随机 seed
-- 随机同步偏移
-- 异常参数
-- 反硬编码检查
-- 设计文档与代码一致性检查
-
-## AI 使用要求
-
-允许并鼓励使用 AI 辅助编程。建议使用 Claude Code 或 Codex，并加装或启用 Superpowers skills。
-
-必须保留 `AI_LOG.md`，记录关键 prompt、AI 生成内容、人工修改内容、测试失败修复过程和最终采纳理由。
-
-即使程序运行成功，学生仍需能够解释每个模块的通信原理、关键参数、代码逻辑和实验结果。
-
-## Pull Request 要求
-
-创建 Pull Request 时，请填写 PR 模板中的学生信息和检查清单。PR 标题建议使用：
+The simulator generates:
 
 ```text
-学号-姓名-无线通信期末项目
+results/received.txt
+results/metrics.json
+results/constellation.png
+results/ber_curve.png
+results/sync_peak.png
 ```
 
-例如：
+## Documents
 
-```text
-2023123456-张三-无线通信期末项目
+- `PRD.md`: PRD summary.
+- `DESIGN.md`: architecture, module interfaces, algorithm choices, and risks.
+- `TEST_PLAN.md`: test plan and hidden-test considerations.
+- `MOCK_TEST_REPORT.md`: mock tests and design revision record.
+- `REPORT.md`: experiment analysis and failure explanation.
+- `DEFENSE_QA.md`: answers to likely defense questions.
+- `AI_LOG.md`: AI-assisted development log.
+
+## Academic Integrity Note
+
+The project does not directly copy `Test.txt` to `received.txt`. All outputs come from the implemented communication chain. Before opening the Pull Request, fill in your student ID, name, GitHub username, fork URL, and branch in `.github/pull_request_template.md`.
+
+## Level 3 Advanced Modules Completed
+
+This project now includes every advanced module listed in the PRD examples:
+
+- Rayleigh flat fading channel.
+- Perfect-CSI one-tap equalization for single-branch Rayleigh.
+- Two-branch receive diversity with maximal-ratio combining (`mrc2`).
+- OFDM modulation with FFT size 64 and cyclic prefix length 16.
+- Rate-1/2 convolutional code with hard-decision Viterbi decoding.
+- Adaptive modulation: BPSK below 6 dB, QPSK from 6 to below 14 dB, and 16-QAM from 14 dB upward.
+- Local Web UI controls for advanced modulation, coding, OFDM, and diversity.
+
+All advanced modules can be enabled together:
+
+```bash
+python main.py --input Test.txt --output results/received.txt --snr 24 --seed 2026 --mod adaptive --channel rayleigh --coding conv --diversity mrc2 --ofdm
 ```

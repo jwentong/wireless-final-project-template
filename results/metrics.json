@@ -1,0 +1,135 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "requested_modulation": "qpsk",
+  "effective_modulation": "qpsk",
+  "channel": "awgn",
+  "payload_bits": 1544,
+  "ber": 0.0,
+  "fer": 0.0,
+  "text_match_rate": 1.0,
+  "checksum_pass": true,
+  "sync_start_index": 109,
+  "sync_expected_offset": 109,
+  "sync_error_symbols": 0,
+  "source_codec": "utf8",
+  "channel_code": "repetition-3",
+  "scrambler": "xor-pn-sequence",
+  "equalizer": "none",
+  "diversity": "none",
+  "ofdm_enabled": false,
+  "ofdm_fft_size": null,
+  "ofdm_cp_len": null,
+  "rayleigh_gain_real": null,
+  "rayleigh_gain_imag": null,
+  "diversity_gain_1_real": null,
+  "diversity_gain_1_imag": null,
+  "diversity_gain_2_real": null,
+  "diversity_gain_2_imag": null,
+  "frame_payload_bits": 1544,
+  "frame_transmitted_payload_bits": 4632,
+  "frame_crc_scope": "original-payload-bits",
+  "frame_crc_pass": true,
+  "frame_crc_pass_before_fec": null,
+  "failure_reason": null,
+  "stage_trace": [
+    {
+      "name": "Source Encode",
+      "detail": "UTF-8 text is converted to a big-endian bitstream.",
+      "input_chars": 71,
+      "output_bits": 1544,
+      "preview": "111001101001011110100000111001111011101010111111..."
+    },
+    {
+      "name": "Scramble / Encrypt",
+      "detail": "PN XOR scrambling is reversible; demo mode can disable it.",
+      "mode": "pn-xor",
+      "input_bits": 1544,
+      "output_bits": 1544,
+      "preview": "011101100010100101100111100100000011101001111001..."
+    },
+    {
+      "name": "Channel Encode",
+      "detail": "Selected FEC adds redundancy before framing.",
+      "mode": "repetition3",
+      "input_bits": 1544,
+      "output_bits": 4632,
+      "code_rate": 0.3333333333333333,
+      "preview": "000111111111000111111000000000111000111000000111..."
+    },
+    {
+      "name": "Frame Build",
+      "detail": "Frame adds preamble, original payload length, transmitted payload length, coded payload, and CRC over original payload bits.",
+      "preamble_bits": 64,
+      "payload_bits": 1544,
+      "tx_payload_bits": 4632,
+      "frame_bits": 4792,
+      "checksum_bits": 32,
+      "checksum_scope": "original-payload-bits"
+    },
+    {
+      "name": "QPSK Modulate",
+      "detail": "Bits are mapped to normalized constellation symbols.",
+      "requested_modulation": "qpsk",
+      "effective_modulation": "qpsk",
+      "input_bits": 4792,
+      "output_symbols": 2396
+    },
+    {
+      "name": "Wireless Channel",
+      "detail": "Random prefix offset is inserted before channel simulation.",
+      "channel": "awgn",
+      "snr_db": 12.0,
+      "prefix_symbols": 109,
+      "received_symbols": 2505,
+      "equalizer": "none",
+      "diversity": "none"
+    },
+    {
+      "name": "Synchronization",
+      "detail": "Receiver searches the preamble correlation peak instead of assuming the frame start.",
+      "detected_start": 109,
+      "expected_start": 109,
+      "error_symbols": 0,
+      "peak_value": 33.199529094281985
+    },
+    {
+      "name": "QPSK Demodulate",
+      "detail": "Hard decisions map each received constellation point back to bits.",
+      "input_symbols": 2396,
+      "output_bits": 4792,
+      "preview": "110010101100101011001010110010101100101011001010..."
+    },
+    {
+      "name": "Channel Decode",
+      "detail": "The receiver applies the selected FEC decoder.",
+      "mode": "repetition3",
+      "input_bits": 4632,
+      "output_bits": 1544,
+      "preview": "011101100010100101100111100100000011101001111001..."
+    },
+    {
+      "name": "Descramble / Decrypt",
+      "detail": "The receiver applies the same PN XOR sequence to recover original source bits.",
+      "mode": "pn-xor",
+      "input_bits": 1544,
+      "output_bits": 1544,
+      "preview": "111001101001011110100000111001111011101010111111..."
+    },
+    {
+      "name": "Source Decode",
+      "detail": "Recovered source bits are converted back to UTF-8 text.",
+      "input_bits": 1544,
+      "output_chars": 71,
+      "decode_error": null
+    },
+    {
+      "name": "Metrics / Plots",
+      "detail": "The simulator writes received.txt, metrics.json, constellation, BER-SNR, and synchronization plots.",
+      "ber": 0.0,
+      "text_match_rate": 1.0,
+      "checksum_pass": true
+    }
+  ]
+}

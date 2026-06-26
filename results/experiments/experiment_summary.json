@@ -1,0 +1,59 @@
+{
+  "purpose": "Evidence for SNR degradation, coding gain, Rayleigh extension, and all Level 3 advanced modules.",
+  "best_required_snr_result": {
+    "scenario": "awgn-coded",
+    "description": "Required baseline with repetition-3 coding.",
+    "snr_db": 12.0,
+    "channel": "awgn",
+    "coding": "repetition3",
+    "scramble": "pn-xor",
+    "requested_modulation": "qpsk",
+    "effective_modulation": "qpsk",
+    "ofdm_enabled": false,
+    "diversity": "none",
+    "ber": 0.0,
+    "fer": 0.0,
+    "text_match_rate": 1.0,
+    "checksum_pass": true,
+    "sync_error_symbols": 0,
+    "received_path": "results\\experiments\\awgn-coded\\snr_12\\received.txt"
+  },
+  "advanced_high_snr_result": {
+    "scenario": "advanced-all",
+    "description": "All advanced modules: adaptive modulation, convolutional Viterbi, OFDM, and MRC2 diversity.",
+    "snr_db": 24.0,
+    "channel": "rayleigh",
+    "coding": "conv",
+    "scramble": "pn-xor",
+    "requested_modulation": "adaptive",
+    "effective_modulation": "16qam",
+    "ofdm_enabled": true,
+    "diversity": "mrc2",
+    "ber": 0.0,
+    "fer": 0.0,
+    "text_match_rate": 1.0,
+    "checksum_pass": true,
+    "sync_error_symbols": 0,
+    "received_path": "results\\experiments\\advanced-all\\snr_24\\received.txt"
+  },
+  "scenario_count": 8,
+  "snrs": [
+    0.0,
+    3.0,
+    6.0,
+    9.0,
+    12.0,
+    15.0,
+    24.0
+  ],
+  "scenarios": {
+    "awgn-coded": "Required baseline with repetition-3 coding.",
+    "awgn-uncoded": "Ablation study: disables FEC to show coding gain.",
+    "rayleigh-coded": "Level 3 fading-channel extension with one-tap equalization.",
+    "ofdm": "Split Level 3 evidence: OFDM with FFT 64 and cyclic prefix 16.",
+    "diversity-mrc2": "Split Level 3 evidence: two-branch Rayleigh MRC receive diversity.",
+    "conv-viterbi": "Split Level 3 evidence: convolutional coding with Viterbi decoding.",
+    "adaptive-mod": "Split Level 3 evidence: SNR-based adaptive BPSK/QPSK/16-QAM modulation.",
+    "advanced-all": "All advanced modules: adaptive modulation, convolutional Viterbi, OFDM, and MRC2 diversity."
+  }
+}
