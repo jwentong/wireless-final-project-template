@@ -4,5 +4,6 @@ __pycache__/
 .venv/
 venv/
 env/
-results/
 *.log
+web_input.txt
+results/experiments/*/
