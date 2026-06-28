@@ -15,7 +15,7 @@
 
 ### Prompt 2：生成完整项目代码
 
-- prompt：请根据以上课程要求生成完整项目代码。
+- prompt：请根据以上课程要求生成完整项目代码并讲解各模块意义。
 - AI 生成内容：生成 `main.py`、`src/` 模块、DESIGN.md、TEST_PLAN.md、MOCK_TEST_REPORT.md、AI_LOG.md 和 tests。
 - manual edited / 人工修改：保留简单可解释的重复码和 PN 扰码，避免引入额外依赖。
 - adopt reason：重复码、QPSK、AWGN、前导相关同步都属于课程基础内容，便于答辩说明。
