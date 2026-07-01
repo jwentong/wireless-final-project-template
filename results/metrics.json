@@ -1,0 +1,12 @@
+{
+  "snr_db": 12.0,
+  "seed": 2026,
+  "modulation": "qpsk",
+  "channel": "awgn",
+  "payload_bits": 6128,
+  "ber": 5.4395126196692775e-05,
+  "fer": 1.0,
+  "text_match_rate": 1.0,
+  "checksum_pass": true,
+  "sync_start_index": 25
+}
